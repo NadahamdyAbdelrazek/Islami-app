@@ -9,5 +9,7 @@
   "quran" : "قراءن",
   "sebha" : "سبحه",
   "radio" : "راديو",
-  "setting" : "الضبط"
+  "setting" : "الضبط",
+  "language": "اللغه",
+  "theme" : "السمه"
 }

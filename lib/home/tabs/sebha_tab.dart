@@ -43,8 +43,8 @@ class _sebhatabState extends State<sebhatab> {
       Text("عدد التسبيحات",
       style: GoogleFonts.elMessiri(
       fontSize: 25, fontWeight: FontWeight.w600)),
-      Container(padding:EdgeInsets.all(18) ,
-      margin: EdgeInsets.all(15),
+      Container(padding:EdgeInsets.all(16) ,
+      margin: EdgeInsets.all(10),
       decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(20),
       color: Color(0xffB7935F),

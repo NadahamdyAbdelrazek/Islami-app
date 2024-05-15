@@ -1,19 +1,22 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:islami/home/sheets/language_bottom_sheet.dart';
+import 'package:provider/provider.dart';
 
+import '../../provider/My_provider.dart';
 import '../sheets/Theme_bottom_sheet.dart';
-
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class settingtab extends StatelessWidget {
   const settingtab({super.key});
 
   @override
   Widget build(BuildContext context) {
+    var provider =Provider.of<MyProvider>(context);
     return Padding(
       padding: const EdgeInsets.all(18.0),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start,children: [
-        Text("Language"),
+        Text(AppLocalizations.of(context)!.language),
         SizedBox(height: 12,),
         InkWell(onTap: (){
           showModalBottomSheet(context: context,isDismissible: true,
@@ -31,11 +34,11 @@ class settingtab extends StatelessWidget {
           ),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 18),
-                child: Text("Arabic"),
+                child: Text( provider.languagecode=="en"?AppLocalizations.of(context)!.english:AppLocalizations.of(context)!.arbic),
               )),
         ),
         SizedBox(height: 35,),
-        Text("Theme"),
+        Text(AppLocalizations.of(context)!.theme),
         SizedBox(height: 12,),
         InkWell(onTap: (){
           showModalBottomSheet(context: context, builder: (context) {
@@ -49,7 +52,7 @@ class settingtab extends StatelessWidget {
               ),
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 18),
-                child: Text("Light"),
+                child: Text(provider.myTheme==ThemeMode.light?AppLocalizations.of(context)!.light:AppLocalizations.of(context)!.dark),
               )),
         ),
         ])

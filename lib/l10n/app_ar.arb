@@ -5,5 +5,9 @@
   "dark": "داكن",
   "light": "مضي",
   "english": "انجلش",
-  "arbic": "عربي"
+  "arbic": "عربي",
+  "quran" : "قراءن",
+  "sebha" : "سبحه",
+  "radio" : "راديو",
+  "setting" : "الضبط"
 }

@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 class MyThemeData{
   static Color primarycolor=Color(0xffB7935F);
-  static Color primarydarkcolor=Color(0xff141A2EF);
+  static Color primarydarkcolor=Color(0xff141A2E);
   static Color blachcolor=Color(0xff242424);
   static Color yellowcolor=Colors.yellow;
   static ThemeData lightTheme=ThemeData(brightness: Brightness.light,
@@ -20,8 +20,8 @@ class MyThemeData{
           iconTheme: IconThemeData(color: Colors.black,size: 30),
           centerTitle: true,
           backgroundColor: Colors.transparent,
-          titleTextStyle: GoogleFonts.elMessiri(color:primarycolor,
-            fontSize:20,
+          titleTextStyle: GoogleFonts.elMessiri(color:Colors.black,
+            fontSize:25,
             fontWeight:FontWeight.bold,
           )
 
@@ -29,7 +29,7 @@ class MyThemeData{
 
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor:primarycolor,
-        showSelectedLabels: false,
+        showSelectedLabels: true,
         showUnselectedLabels: false,
         selectedItemColor: Colors.black,
         unselectedItemColor: Colors.white,
@@ -70,7 +70,7 @@ class MyThemeData{
     ),
       bottomNavigationBarTheme: BottomNavigationBarThemeData(
         backgroundColor:primarydarkcolor,
-        showSelectedLabels: false,
+        showSelectedLabels: true,
         showUnselectedLabels: false,
         selectedItemColor: yellowcolor,
         unselectedItemColor: Colors.white,

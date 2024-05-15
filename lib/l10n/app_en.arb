@@ -5,5 +5,9 @@
   "dark": "Dark",
   "light": "Light",
   "english": "English",
-  "arbic": "Arabic"
+  "arbic": "Arabic",
+  "quran" : "Quran",
+  "sebha" : "Sebha",
+  "radio" : "Radio",
+  "setting" : "Setting"
 }

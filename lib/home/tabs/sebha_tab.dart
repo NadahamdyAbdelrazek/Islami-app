@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class sebhatab extends StatefulWidget {
@@ -29,12 +30,11 @@ class _sebhatabState extends State<sebhatab> {
         Stack(
         alignment: Alignment.topCenter,
         children: [
-        Transform.rotate(angle: angle,
-        child: Padding(
+        Padding(
             padding: EdgeInsets.only(top:MediaQuery.of(context).size.height * .075),
-            child: Image.asset("assets/images/body_sebha_logo.png"),
-      ),
-      ),
+            child: Transform.rotate(angle: angle,
+                child: Image.asset("assets/images/body_sebha_logo.png")),
+              ),
       Image.asset("assets/images/head_sebha_logo.png"),
       ],
       ),
@@ -43,7 +43,7 @@ class _sebhatabState extends State<sebhatab> {
       Text("عدد التسبيحات",
       style: GoogleFonts.elMessiri(
       fontSize: 25, fontWeight: FontWeight.w600)),
-      Container(padding:EdgeInsets.all(10) ,
+      Container(padding:EdgeInsets.all(18) ,
       margin: EdgeInsets.all(15),
       decoration: BoxDecoration(
       borderRadius: BorderRadius.circular(20),
@@ -60,11 +60,11 @@ class _sebhatabState extends State<sebhatab> {
       sebha();
       },
       child: Container(decoration: BoxDecoration(color: Color(0xffB7935F),borderRadius: BorderRadius.circular(50)),
-      padding: EdgeInsets.all(8),
-      width: 137,
-      height: 51,
+      padding: EdgeInsets.all(12),
+      width: 137.w,
+      height: 51.h,
       child: Text(sebhaname[index]
-      ,style: TextStyle(fontSize: 25, fontWeight: FontWeight.w400,color: Colors.white)),
+      ,style: TextStyle(fontSize: 20, fontWeight: FontWeight.w400,color: Colors.white)),
       ),
       )
       ],

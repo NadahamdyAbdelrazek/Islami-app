@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:islami/home/hadeth_model.dart';
+import 'package:islami/my_theme.dart';
 import 'package:provider/provider.dart';
 
 import '../provider/My_provider.dart';

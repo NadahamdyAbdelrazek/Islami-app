@@ -1,11 +1,39 @@
+import 'dart:async';
+
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:islami/home/api_manager/api_manager.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../home/models/RadioModel.dart';
 
 class MyProvider extends ChangeNotifier {
   String languagecode = "en";
+  List<Radios> radios=[];
   ThemeMode myTheme = ThemeMode.light;
 
+  Future<void> getAllRadios()async{
+    try{
+      radios= await ApiManager.getAllRadio();
+      notifyListeners();
+    }catch(e){
+      print(e);
+      notifyListeners();
+    }
+
+  }
+  AudioPlayer audioPlayer=AudioPlayer();
+  Future<void> playAudio(String url)async{
+    audioPlayer.pause();
+   await audioPlayer.play(UrlSource(url));
+   notifyListeners();
+  }
+  Future<void> pauseAudio()async{
+    await audioPlayer.pause();
+    notifyListeners();
+  }
+  
   changeLanguage(String code) async {
     if (code == languagecode) {
       return;
